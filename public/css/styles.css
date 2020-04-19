@@ -1,0 +1,64 @@
+/*fontes Google Fonts
+font-family: 'Merriweather Sans', sans-serif;
+*/
+
+body{
+    text-align: center;
+    background-color: #84a9ac;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+h1, h2, h3{
+    color: #30475e;
+    text-shadow: 2px 2px 2px rgba(206,89,55,0);
+}
+
+.logoNavBar{
+    width: 40px;
+    margin: auto 10px;
+}
+
+.botaoHome{
+    text-align: left;
+}
+
+.headerText{
+    width: 60%;
+    margin: 30px auto;
+}
+
+main img {
+    margin: 10px auto 10px;
+    width: 15%;
+}
+
+.nav-item{
+    margin: auto 10px;;
+}
+
+.navCadastro{
+margin-right: 30px;
+}
+
+nav button{
+    margin: auto 10px;
+}
+
+main .card {
+    width: 50%;
+}
+
+
+.campoBusca{
+width: 40%;
+margin: 30px auto;
+}
+
+
+
+
+
+footer{
+font-weight: lighter;
+margin-top: 200px;
+}
