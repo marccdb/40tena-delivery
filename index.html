@@ -4,82 +4,86 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <title>Delivery</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap"
-            rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="botaoHome">
+                <a class="" href="#">
+                    <img class="logoNavBar" src="https://image.flaticon.com/icons/svg/609/609361.svg"
+                        alt="Imagem de entregador" />
+                    <span class="navbar-brand">40tena Delivery</span></a>
+            </div>
 
-        <div class="botaoHome">
-        <a class="" href="#">
-        <img class="logoNavBar" src="https://image.flaticon.com/icons/svg/609/609361.svg" alt="Imagem de entregador">
-        <span class="navbar-brand">40tena Delivery</span></a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Fornecedores</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Listar Por Cidade
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Vinhedo</a>
-                        <a class="dropdown-item" href="#">Valinhos</a>
-                        <a class="dropdown-item" href="#">Louveira</a>
-                    </div>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fornecedores</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Listar Por Cidade
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Vinhedo</a>
+                            <a class="dropdown-item" href="#">Valinhos</a>
+                            <a class="dropdown-item" href="#">Louveira</a>
+                        </div>
+                    </li>
                 </ul>
                 <div class="navCadastro navbar-right">
                     <span class="navbar-brand">
-                        Fornecedor, cadastre-se gratuitamente! 
+                        Fornecedor, cadastre-se gratuitamente!
                     </span>
-                    <button class="btn btn-outline-warning" type="button">Cadastre-se</button>
-                </div>                      
-        </div>
-    </nav>
+                    <button class="btn btn-outline-warning" type="button">
+                        Cadastre-se
+                    </button>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="headerText">
-        <h3>Durante este período de isolamento social, comerciantes locais tiveram seus negócios muito afetados. Pensando nisso, criei o 
-        <strong>40tena Delivery</strong>, uma plataforma que aproxima comerciantes e fregueses, garantindo a continuidade dos negócios.</h3>
+            <img class="logotipo" src="images/logotipo.png" alt="Logotipo 40tena Delivery">
+            <h3>
+                Durante este período de isolamento social, comerciantes locais tiveram
+                seus negócios muito afetados. Pensando nisso, foi criado o
+                <strong>40tena Delivery</strong>, uma plataforma que aproxima
+                comerciantes e fregueses, garantindo a continuidade dos negócios.
+            </h3>
         </div>
-        <img src="https://image.flaticon.com/icons/svg/609/609361.svg" alt="Logo delivery">
-
-        <div class="">
-        <h2>Consumidor, digite o serviço que esta procurando:</h2>
-        <form class="form-group" action="/" method="post">
-        <input class="campoBusca form-control shadow-lg p-3 mb-5 bg-white rounded" type="text" name="campoBusca" autofocus>
-        <button class="btn btn-dark btn-lg" type="submit">Buscar</button>
-        </form>
+        <img class="imgDelivery" src="https://image.flaticon.com/icons/svg/609/609361.svg" alt="Logo delivery" />
+        <div class="imgCaixas">
+        <img class="imgCaixa" src="https://image.flaticon.com/icons/svg/679/679922.svg" alt="Logo caixa">
+        <img class="imgCaixa" src="https://image.flaticon.com/icons/svg/679/679922.svg" alt="Logo caixa">
+        <img class="imgCaixa" src="https://image.flaticon.com/icons/svg/679/679922.svg" alt="Logo caixa">
         </div>
 
 
-
-
-
+        <div class="actionDiv p-3 mb-2 bg-dark text-white">
+            <section id="searchSection">
+                <h1 class="text-light">
+                    Digite o serviço que esta procurando:
+                </h1>
+                <form class="form form-group" action="/" method="post">
+                    <input class="campoBusca form-control shadow p-3 mb-5 bg-white rounded" type="text"
+                        name="campoBusca" autofocus />
+                    <button class="btn btn-light btn-lg" type="submit">Buscar</button>
+                </form>
+            </section>
+        </div>
     </main>
     <footer>Desenvolvido por Marcio Del Bianco - 2020</footer>
-
-
-
-
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
