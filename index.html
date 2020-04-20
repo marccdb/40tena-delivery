@@ -23,7 +23,9 @@
                         alt="Imagem de entregador" />
                     <span class="navbar-brand">40tena Delivery</span></a>
             </div>
-
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -41,13 +43,14 @@
                         </div>
                     </li>
                 </ul>
-                <div class="navCadastro navbar-right">
+                <div class="navCadastro">
                     <span class="navbar-brand">
                         Fornecedor, cadastre-se gratuitamente!
                     </span>
+                    <a href="#form">
                     <button class="btn btn-outline-warning" type="button">
                         Cadastre-se
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </nav>
@@ -83,7 +86,40 @@
             </section>
         </div>
     </main>
+
+    <section id="form">
+        <div class="jumbotron hidden jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-5">Cadastro Realizado!</h1>
+                <a class="botaoVoltar btn btn-secondary btn-lg" href="#" role="button">Voltar</a>
+            </div>
+        </div>
+        <h1>Cadastre aqui o seu estabelecimento:</h1>
+        <form action="/cadastro" method="post">
+            <div class="form-group">
+            <input type="text" class="form-control" name="estabelecimento" placeholder="Digite o nome do seu estabelecimento" >
+            <input type="text" class="form-control" name="ramo" placeholder="Qual o ramo do seu estabelecimento?">
+            <select class="form-control" name="listaCidades">
+                <option value="Vinhedo">Vinhedo</option>
+                <option value="Valinhos">Valinhos</option>
+                <option value="Louveira">Louveira</option>
+            </select>
+            <input type="tel" class="form-control" name="telefone" placeholder="Insire seu telefone para contato">
+            <button class="botaoCadastro btn btn-warning btn-lg" type="submit">CADASTRAR</button>
+            </div>
+        </form>
+    </section>
+
+
+
+
+
+
+
+
+
     <footer>Desenvolvido por Marcio Del Bianco - 2020</footer>
+        <script src="index.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -94,7 +130,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-</body>
 
+    
+
+</body>
 </html>

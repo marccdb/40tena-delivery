@@ -48,9 +48,6 @@ h1, h2, h3{
     margin: auto 10px;;
 }
 
-.navCadastro{
-margin-right: 30px;
-}
 
 nav button{
     margin: auto 10px;
@@ -78,6 +75,36 @@ margin: 30px auto;
 }
 
 
+#form{
+    width: 50%;
+    margin: 50px auto;
+}
+
+#form input, select{
+
+    margin: 15px auto;
+}
+
+
+.botaoCadastro{
+    margin: 20px auto;
+}
+
+.jumbotron{
+    position: absolute;
+    width: 800px;
+    height: 356px;
+    margin: 0;
+}
+
+.jumbotron .container h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.hidden{
+    visibility: hidden;
+}
 
 footer{
 font-weight: lighter;
