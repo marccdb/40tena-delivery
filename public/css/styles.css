@@ -6,15 +6,14 @@ body{
     text-align: center;
     background-color: #dbdbdb;
     font-family: 'Merriweather Sans', sans-serif;
-    overflow-x: hidden;
     max-width: 100%;
 
 }
 
 h1, h2, h3{
     color: #30475e;
+    line-height: 1.5;
     text-shadow: 2px 2px 2px rgba(206,89,55,0);
-    text-align: center;
 }
 
 
@@ -52,16 +51,13 @@ h1, h2, h3{
     margin: auto 10px;;
 }
 
-
 nav button{
     margin: auto 10px;
 }
 
 .actionDiv{
-    height: 30vh;
     display: flex;
     align-items: center;
-    
 }
 
 #searchSection{
@@ -80,7 +76,6 @@ margin: 30px auto;
 
 
 #form{
-    width: 50%;
     margin: 50px auto;
 }
 
