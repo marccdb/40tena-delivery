@@ -6,11 +6,15 @@ body{
     text-align: center;
     background-color: #dbdbdb;
     font-family: 'Merriweather Sans', sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+
 }
 
 h1, h2, h3{
     color: #30475e;
     text-shadow: 2px 2px 2px rgba(206,89,55,0);
+    text-align: center;
 }
 
 
@@ -54,7 +58,7 @@ nav button{
 }
 
 .actionDiv{
-    height: 295px;
+    height: 30vh;
     display: flex;
     align-items: center;
     
