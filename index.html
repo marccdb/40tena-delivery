@@ -18,7 +18,6 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="botaoHome">
-                <a class="" href="/">
                     <img class="logoNavBar" src="https://image.flaticon.com/icons/svg/609/609361.svg"
                         alt="Imagem de entregador" />
                     <span class="navbar-brand">40tena Delivery</span></a>
@@ -28,19 +27,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/fornecedores">Fornecedores</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Listar Por Cidade
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Vinhedo</a>
-                            <a class="dropdown-item" href="#">Valinhos</a>
-                            <a class="dropdown-item" href="#">Louveira</a>
-                        </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#fornecedores">Lista de fornecedores</a>
                     </li>
                 </ul>
                 <div class="navCadastro">
@@ -55,7 +43,7 @@
             </div>
         </nav>
     </header>
-    <main class="container-fluid col-lg-12 col-md-12 col-sm-4">
+    <main class="col-lg-12 col-md-12 col-sm-4">
         <div class="headerText">
             <img class="logotipo" src="images/logotipo.png" alt="Logotipo 40tena Delivery">
             <h3>
@@ -104,15 +92,22 @@
                 <div class="form-group">
                     <input type="text" class="form-control" name="estabelecimento"
                         placeholder="Digite o nome do seu estabelecimento">
-                    <input type="text" class="form-control" name="ramo"
-                        placeholder="Qual o ramo do seu estabelecimento?">
+                    <select class="form-control" name="ramo">
+                        <option value="" selected disabled>Ramo de atução</option>
+                        <option value="Alimentos">Alimentos</option>
+                        <option value="Serviços">Serviços</option>
+                        <option value="Outros">Outros</option>
+                    </select>
                     <select class="form-control" name="listaCidades">
+                        <option value="" selected disabled>Selecione a cidade</option>
                         <option value="Vinhedo">Vinhedo</option>
                         <option value="Valinhos">Valinhos</option>
                         <option value="Louveira">Louveira</option>
                     </select>
                     <input type="tel" class="form-control" name="telefone"
-                        placeholder="Insire seu telefone para contato">
+                        placeholder="Digite o telefone para contato">
+                        <input type="text" class="form-control" name="descricao"
+                            placeholder="Pequena descrição do serviço">
                     <button class="botaoCadastro btn btn-warning btn-lg" type="submit">CADASTRAR</button>
 
                 </div>
@@ -122,124 +117,112 @@
 
     <section id="fornecedores">
         <h1 class="text-light">Lista de fornecedores</h1>
+        <button type="button" class="btn btn-outline-light" data-toggle="button" aria-pressed="false">
+            Vinhedo
+        </button>
+        <button type="button" class="btn btn-outline-light" data-toggle="button" aria-pressed="false">
+            Valinhos
+        </button>
+        <button type="button" class="btn btn-outline-light" data-toggle="button" aria-pressed="false">
+            Louveira
+        </button>
+
+
         <div class="cardBlock">
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
 
+            <div class="card col-lg-4 mx-auto">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
+                    <h5 class="card-title">{{name}}</h5>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
+                </div>
             </div>
 
             <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
                 </div>
-
             </div>
 
             <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
                 </div>
-
-            </div>
-
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-
             </div>
 
 
             <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
                 </div>
+            </div>
 
+
+            <div class="card col-lg-4 mx-auto">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
+                    <h5 class="card-title">{{name}}</h5>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
+                </div>
             </div>
 
 
 
             <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
                 </div>
-
             </div>
-
-
-
-
 
             <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
                 </div>
-
             </div>
-
-
-
-
 
             <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
+                <img :src="imgAlim" class="card-img helper" alt="...">
+                <div class="card-body helper">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{ramo}}</p>
+                    <p class="card-text">{{cidade}}</p>
+                    <p class="card-text">{{telefone}}</p>
+                    <p class="card-text">{{descricao}}</p>
                 </div>
-
             </div>
 
-
-
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-
-            </div>
-
-
-
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-
-            </div>
+            
 
 
         </div>
