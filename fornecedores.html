@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <title>40tena Delivery</title>
+    <title>Fornecedores - 40tena Delivery</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link
@@ -13,6 +13,12 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
+
+<style>
+    #form {
+        margin: 80px auto;
+    }
+</style>
 
 <body>
     <header>
@@ -55,82 +61,69 @@
             </div>
         </nav>
     </header>
-    <main class="container-fluid col-lg-12 col-md-12 col-sm-4">
-        <div class="headerText">
-            <img class="logotipo" src="images/logotipo.png" alt="Logotipo 40tena Delivery">
-            <h3>
-                Durante este período de isolamento social, comerciantes locais tiveram
-                seus negócios muito afetados. Pensando nisso, foi criado o
-                <strong>40tena Delivery</strong>, uma plataforma que aproxima
-                comerciantes e fregueses, garantindo a continuidade dos negócios.
-            </h3>
-            <img class="imgDelivery" src="https://image.flaticon.com/icons/svg/609/609361.svg" alt="Logo delivery" />
-            <div class="imgCaixas">
-                <img class="imgCaixa" src="https://image.flaticon.com/icons/svg/679/679922.svg" alt="Logo caixa">
-                <img class="imgCaixa" src="https://image.flaticon.com/icons/svg/679/679922.svg" alt="Logo caixa">
-                <img class="imgCaixa" src="https://image.flaticon.com/icons/svg/679/679922.svg" alt="Logo caixa">
-            </div>
-        </div>
 
 
+    <main>
 
+        <section id="fornecedores">
+            <div class="row row-cols-1 row-cols-md-3">
 
-        <div class="actionDiv container-fluid p-3 mb-2 bg-dark text-white">
-            <section id="searchSection">
-                <h1 class="text-light">
-                    Digite o serviço que esta procurando:
-                </h1>
-                <form class="form form-group" action="/" method="post">
-                    <input class="campoBusca form-control shadow p-3 mb-5 bg-white rounded" type="text"
-                        name="campoBusca" autofocus />
-                    <button class="btn btn-light btn-lg" type="submit">Buscar</button>
-                </form>
-
-            </section>
-        </div>
-    </main>
-
-    <section id="form">
-        <div class="jumbotron hidden jumbotron-fluid col-lg-8 col-md-8 col-sm-4">
-            <div class="container-fluid">
-                <h1 class="display-5">Cadastro Realizado!</h1>
-                <a class="botaoVoltar btn btn-secondary btn-lg" href="#" role="button">Voltar</a>
-            </div>
-        </div>
-        <div class="formulario container-fluid col-lg-8 col-md-8 col-sm-4">
-
-            <h1>Cadastre aqui o seu estabelecimento:</h1>
-            <form action="/cadastro" method="post">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="estabelecimento"
-                        placeholder="Digite o nome do seu estabelecimento">
-                    <input type="text" class="form-control" name="ramo"
-                        placeholder="Qual o ramo do seu estabelecimento?">
-                    <select class="form-control" name="listaCidades">
-                        <option value="Vinhedo">Vinhedo</option>
-                        <option value="Valinhos">Valinhos</option>
-                        <option value="Louveira">Louveira</option>
-                    </select>
-                    <input type="tel" class="form-control" name="telefone"
-                        placeholder="Insire seu telefone para contato">
-                    <button class="botaoCadastro btn btn-warning btn-lg" type="submit">CADASTRAR</button>
-
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img :src="image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ name }} </h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
                 </div>
-        </div>
-        </form>
-    </section>
 
 
+            </div>     
+        </section>
+
+        <section id="form">
+            <div class="jumbotron hidden jumbotron-fluid col-lg-8 col-md-8 col-sm-4">
+                <div class="container-fluid">
+                    <h1 class="display-5">Cadastro Realizado!</h1>
+                    <a class="botaoVoltar btn btn-secondary btn-lg" href="#" role="button">Voltar</a>
+                </div>
+            </div>
+            <div class="formulario container-fluid col-lg-8 col-md-8 col-sm-4">
+
+                <h1>Cadastre aqui o seu estabelecimento:</h1>
+                <form action="/cadastro" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="estabelecimento"
+                            placeholder="Digite o nome do seu estabelecimento">
+                        <input type="text" class="form-control" name="ramo"
+                            placeholder="Qual o ramo do seu estabelecimento?">
+                        <select class="form-control" name="listaCidades">
+                            <option value="Vinhedo">Vinhedo</option>
+                            <option value="Valinhos">Valinhos</option>
+                            <option value="Louveira">Louveira</option>
+                        </select>
+                        <input type="tel" class="form-control" name="telefone"
+                            placeholder="Insire seu telefone para contato">
+                        <button class="botaoCadastro btn btn-warning btn-lg" type="submit">CADASTRAR</button>
+
+                    </div>
+            </div>
+            </form>
+        </section>
 
 
-
-
-
+    </main>
 
 
     <footer>Desenvolvido por Marcio Del Bianco - 2020</footer>
 
+    
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -140,9 +133,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-
-
-    <script src="index.js"></script>
+    <script src="fornecedores.js"></script>
 </body>
 
 </html>

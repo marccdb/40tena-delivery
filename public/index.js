@@ -12,5 +12,5 @@ function toggleVisibility() {
 
 //funções de botao Jumbotron
 botaoCadastro.addEventListener("click", toggleVisibility);
-
 botaoVoltar.addEventListener("click", toggleVisibility);
+

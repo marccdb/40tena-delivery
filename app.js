@@ -12,12 +12,16 @@ app.listen(process.env.PORT || 3000, function () {
     console.log("Listening on port 3000");
 });
 
+//ROUTES
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/fornecedores", function(req,res){
+    res.sendFile(__dirname + "/fornecedores.html")
+})
 
-//Rotas
+
 app.post("/", function (req, res) {
     var campoBusca = req.body.campoBusca;
 
