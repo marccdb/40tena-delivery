@@ -29,5 +29,10 @@ const app = new Vue({
         descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada ornare diam. Praesent suscipit diam id commodo tincidunt.",
         imgAlim: "https://image.flaticon.com/icons/svg/2871/2871612.svg",
         imgServ: "https://image.flaticon.com/icons/png/512/2304/2304375.png"
+    },
+    methods: {
+        filtrarCidade(cidade){
+            
+        }
     }
 })

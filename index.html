@@ -88,26 +88,32 @@
         <div class="formulario container-fluid col-lg-8 col-md-8 col-sm-4">
 
             <h1>Cadastre aqui o seu estabelecimento:</h1>
+
             <form action="/cadastro" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="estabelecimento"
+
+                    <input type="text" class="form-control" name="formName"
                         placeholder="Digite o nome do seu estabelecimento">
-                    <select class="form-control" name="ramo">
+
+                    <select class="form-control" name="formCategory">
                         <option value="" selected disabled>Ramo de atução</option>
                         <option value="Alimentos">Alimentos</option>
                         <option value="Serviços">Serviços</option>
                         <option value="Outros">Outros</option>
                     </select>
-                    <select class="form-control" name="listaCidades">
+
+                    <select class="form-control" name="formCity">
                         <option value="" selected disabled>Selecione a cidade</option>
                         <option value="Vinhedo">Vinhedo</option>
                         <option value="Valinhos">Valinhos</option>
                         <option value="Louveira">Louveira</option>
                     </select>
-                    <input type="tel" class="form-control" name="telefone"
+
+                    <input type="tel" class="form-control" name="formTelephone"
                         placeholder="Digite o telefone para contato">
-                        <input type="text" class="form-control" name="descricao"
+                        <input type="text" class="form-control" name="formDescription"
                             placeholder="Pequena descrição do serviço">
+                            
                     <button class="botaoCadastro btn btn-warning btn-lg" type="submit">CADASTRAR</button>
 
                 </div>

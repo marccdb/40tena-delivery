@@ -1,49 +1,77 @@
+//Requiring dependencies
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const mongoose = require("mongoose");
 
+//Dependencies settings
 app.use(express.static("public"));
-
+const schema = mongoose.Schema;
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+//Opening server
 app.listen(process.env.PORT || 3000, function () {
     console.log("Listening on port 3000");
 });
+
+
+//Mongoose (MongoDB) Set up
+
+function startServer() {
+    mongoose.connect('mongodb+srv://marcio:WfPtgB1NNVVENg9l@cluster0-rtrkq.gcp.mongodb.net/test?retryWrites=true&w=majority', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
+}
+
+const fornecedorSchema = new schema({
+    name: String,
+    ramo: String,
+    cidade: String,
+    telefone: Number,
+    descricao: String
+});
+
+const fornecedor = mongoose.model('Fornecedor', fornecedorSchema);
+
+
+
+
+
 
 //ROUTES
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/fornecedores", function(req,res){
-    res.sendFile(__dirname + "/fornecedores.html")
-})
-
 
 app.post("/", function (req, res) {
-    var campoBusca = req.body.campoBusca;
+    let campoBusca = req.body.campoBusca;
 
     console.log(campoBusca); //retirar em versão final
 });
 
 app.post("/cadastro", function (req, res) {
 
-    var estabelecimento = req.body.estabelecimento;
-    var ramo = req.body.ramo;
-    var cidade = req.body.listaCidades;
-    var telefone = req.body.telefone;
+    let getName = req.body.formName;
+    let getCategory = req.body.formCategory;
+    let getCity = req.body.formCity;
+    let getTelephone = req.body.formTelephone;
+    let getDescription = req.body.formDescription;
 
-    var dadosCadastro = {
-        estabelecimento,
-        ramo,
-        cidade,
-        telefone
-    };
+    startServer();
 
-    var dadosJsonStringfy = JSON.stringify(dadosCadastro);
+    const newFornecedor = new fornecedor({
+        name: getName,
+        ramo: getCategory,
+        cidade: getCity,
+        telefone: getTelephone,
+        descricao: getDescription
+    });
 
+    newFornecedor.save(err => {if (err) return err});
 
-    console.log(dadosJsonStringfy); //retirar em versão final
+    console.log(newFornecedor); //retirar em versão final
 });
