@@ -1,32 +1,31 @@
-let botaoCadastro = document.querySelector('.botaoCadastro');
-let popUpCadastro = document.querySelector('.jumbotron');
-let botaoVoltar = document.querySelector('.botaoVoltar');
-let formulario = document.querySelector('.formulario');
+const botaoCadastro = document.querySelector('.botaoCadastro');
+const popUpCadastro = document.querySelector('.jumbotron');
+const botaoVoltar = document.querySelector('.botaoVoltar');
+const formulario = document.querySelector('.formulario');
+
 
 function toggleVisibility() {
   popUpCadastro.classList.toggle('hidden');
   formulario.classList.toggle('hidden');
 }
 
-//funções de botao Jumbotron
+//Jumbotron actions
 botaoCadastro.addEventListener('click', toggleVisibility);
 botaoVoltar.addEventListener('click', toggleVisibility);
 
 //VUE
 
+const DISPLAY_NAME, DISPLAY_TYPE, DISPLAY_CITY, DISPLAY_PHONE, DISPLAY_DESCRIPTION;
+
+
 const app = new Vue({
   el: '#fornecedores',
   data: {
-    name: 'NOME FORNECEDOR',
-    ramo: 'Ramo',
-    cidade: 'Cidade',
-    telefone: 'Telefone',
-    descricao:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada ornare diam. Praesent suscipit diam id commodo tincidunt.',
+    name: DISPLAY_NAME,
+    type: DISPLAY_TYPE,
+    city: DISPLAY_CITY,
+    phone: DISPLAY_PHONE,
+    descriptiopn: DISPLAY_DESCRIPTION,
     imgAlim: 'https://image.flaticon.com/icons/svg/2871/2871612.svg',
     imgServ: 'https://image.flaticon.com/icons/png/512/2304/2304375.png',
-  },
-  methods: {
-    filtrarCidade(cidade) {},
-  },
-});
+  }});

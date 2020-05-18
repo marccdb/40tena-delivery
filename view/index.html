@@ -107,27 +107,25 @@
                 <div class="form-group">
 
                     <input type="text" class="form-control" name="formName"
-                        placeholder="Digite o nome do seu estabelecimento">
+                        placeholder="Digite o nome do seu estabelecimento" required>
 
-                    <select class="form-control" name="formCategory">
+                    <select class="form-control" name="formCategory" required>
                         <option value="" selected disabled>Ramo de atução</option>
                         <option value="Alimentos">Alimentos</option>
                         <option value="Serviços">Serviços</option>
                         <option value="Outros">Outros</option>
                     </select>
 
-                    <select class="form-control" name="formCity">
+                    <select class="form-control" name="formCity" required>
                         <option value="" selected disabled>Selecione a cidade</option>
                         <option value="Vinhedo">Vinhedo</option>
                         <option value="Valinhos">Valinhos</option>
                         <option value="Louveira">Louveira</option>
                     </select>
 
-                    <input type="tel" class="form-control" name="formTelephone"
-                        placeholder="Digite o telefone para contato">
-                        <input type="text" class="form-control" name="formDescription"
-                            placeholder="Pequena descrição do serviço">
-                            
+                    <input type="tel" class="form-control" name="formTelephone" placeholder="Digite o telefone para contato" required>
+                    <input type="text" class="form-control" name="formDescription" placeholder="Pequena descrição do serviço" required>                            
+
                     <button class="botaoCadastro btn btn-warning btn-lg" type="submit">CADASTRAR</button>
 
                 </div>
@@ -151,98 +149,15 @@
         <div class="cardBlock">
 
             <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
+                <img :src="imgAlim" class="card-img helper" alt="Image food">
                 <div class="card-body helper">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
+                    <p class="card-text">{{type}}</p>
+                    <p class="card-text">{{city}}</p>
+                    <p class="card-text">{{phone}}</p>
+                    <p class="card-text">{{description}}</p>
                 </div>
-            </div>
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
-                <div class="card-body helper">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
-                </div>
-            </div>
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
-                <div class="card-body helper">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
-                </div>
-            </div>
-
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
-                <div class="card-body helper">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
-                </div>
-            </div>
-
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
-                <div class="card-body helper">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
-                </div>
-            </div>
-
-
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
-                <div class="card-body helper">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
-                </div>
-            </div>
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
-                <div class="card-body helper">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
-                </div>
-            </div>
-
-            <div class="card col-lg-4 mx-auto">
-                <img :src="imgAlim" class="card-img helper" alt="...">
-                <div class="card-body helper">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{ramo}}</p>
-                    <p class="card-text">{{cidade}}</p>
-                    <p class="card-text">{{telefone}}</p>
-                    <p class="card-text">{{descricao}}</p>
-                </div>
-            </div>
-
-            
+            </div>          
 
 
         </div>

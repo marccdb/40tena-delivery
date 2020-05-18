@@ -4,7 +4,7 @@ font-family: 'Merriweather Sans', sans-serif;
 
 body{
     text-align: center;
-    background-color: #ececec;
+    background: radial-gradient(circle, rgba(58,71,180,0.5) 0%, rgba(0,0,0,0.20211834733893552) 50%, rgba(58,71,180,0.5) 100%);
     font-family: 'Merriweather Sans', sans-serif;
     max-width: 100%;
 
@@ -128,7 +128,7 @@ margin: 30px auto;
 }
 
 .card{
-    margin: 10px auto;
+    margin: 10px 20px;
     display: inline;
 }
 

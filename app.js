@@ -1,11 +1,9 @@
-//Requiring dependencies
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-//Dependencies settings
-app.use(express.static('public'));
+app.use(express.static("public"));
 const schema = mongoose.Schema;
 app.use(
   bodyParser.urlencoded({
@@ -13,28 +11,28 @@ app.use(
   })
 );
 
-//Opening server
-app.listen(process.env.PORT || 3000, function () {
-  console.log('Listening on port 3000');
+//Set up connection
+const localPORT = 3000;
+app.listen(process.env.PORT || localPORT, () => {
+  console.log(`Listening on port ${localPORT}`);
 });
 
 //Mongoose (MongoDB) Set up
 
 function startServer() {
   mongoose.connect(
-    'mongodb+srv://marcio:WfPtgB1NNVVENg9l@cluster0-rtrkq.gcp.mongodb.net/40tena-delivery?retryWrites=true&w=majority',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
+    "mongodb+srv://marcio:WfPtgB1NNVVENg9l@cluster0-rtrkq.gcp.mongodb.net/40tena-delivery?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true },
     (err) => {
       if (err) console.log(err);
-      else console.log('MongoDB connection success');
+      else console.log("MongoDB connection success");
     }
   );
 }
 
-const fornecedorSchema = new schema({
+//SCHEMA
+
+const fornecedor_Schema = new mongoose.Schema({
   name: String,
   ramo: String,
   cidade: String,
@@ -42,22 +40,19 @@ const fornecedorSchema = new schema({
   descricao: String,
 });
 
-const fornecedor = mongoose.model('fornecedores', fornecedorSchema);
-
-const fornecedoresArr = [];
+//COLLECTION
+const Fornecedor = mongoose.model("fornecedores", fornecedor_Schema);
 
 //ROUTES
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/view/index.html");
 });
 
-app.post('/', function (req, res) {
+app.post("/", (req, res) => {
   let campoBusca = req.body.campoBusca;
-
-  console.log(campoBusca); //retirar em versão final
 });
 
-app.post('/cadastro', function (req, res) {
+app.post("/cadastro", (req, res) => {
   let getName = req.body.formName;
   let getCategory = req.body.formCategory;
   let getCity = req.body.formCity;
@@ -66,7 +61,7 @@ app.post('/cadastro', function (req, res) {
 
   startServer();
 
-  const newFornecedor = new fornecedor({
+  const newFornecedor = new Fornecedor({
     name: getName,
     ramo: getCategory,
     cidade: getCity,
@@ -77,8 +72,23 @@ app.post('/cadastro', function (req, res) {
   newFornecedor.save((err) => {
     if (err) console.log(err);
   });
-  fornecedoresArr.push(newFornecedor);
-  //mongoose.connection.close( err => {if (err) console.log(err); else console.log("MongoDB connection closed")});
 
-  console.log(fornecedoresArr); //retirar em versão final
+  console.log(fornecedoresArr); //Remove from final version
 });
+
+//Retrieve from database
+
+mongoose.connect(
+  "mongodb+srv://marcio:WfPtgB1NNVVENg9l@cluster0-rtrkq.gcp.mongodb.net/40tena-delivery?retryWrites=true&w=majority",
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  (err) => {
+    if (err) console.log(err);
+    else console.log("MongoDB connection success");
+  });
+
+Fornecedor.find((err, fornecedores) => {
+  if (err) console.log(err);
+  else console.log(fornecedores);
+});
+
+module.exports = app;
